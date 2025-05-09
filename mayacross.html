@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='./style.css' rel='stylesheet'>
+  <title>Maya Cross | E.A. Speed</title>
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+
+
+<body>
+  <header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about-me.html">About Me</a></li>
+        <li><a href="./cv.html">CV</a></li>
+        <li><a href="./services.html">Formatting Services</a></li>
+        <li class="active"><a href="./mayacross.html">Maya Cross</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<br><br>
+  <div class="title">
+    <h1 id="title">Maya Cross</h1>
+  </div>
+
+  <h3>This page is under construction! Don't look!</h3>
+    <br><br>
+  
+  <div id="selector">
+    <h3 class="selector">Choose Chol Q'ij date for which you want to generate a cross:</h3>
+      
+      <br><br>
+      
+    <select name="daynumber" id="numberSelect" onchange="passValue()">
+ 	    <option value=0> </option>
+	    <option value=1>1</option>
+	    <option value=2>2</option>
+	    <option value=3>3</option>
+	    <option value=4>4</option>
+	    <option value=5>5</option>
+	    <option value=6>6</option>
+	    <option value=7>7</option>
+	    <option value=8>8</option>
+	    <option value=9>9</option>
+	    <option value=10>10</option>
+	    <option value=11>11</option>
+	    <option value=12>12</option>
+	    <option value=13>13</option>
+    </select>
+    
+    <select name="tzolkin" id="daySelect" onchange="passValue()">
+	    <option value=0>    </option>
+	    <option value=1>Imox</option>
+	    <option value=2>Iq</option>
+	    <option value=3>Aq'ab'al</option>
+	    <option value=4>K'at</option>
+	    <option value=5>Kan</option>
+    	<option value=6>Kame</option>
+    	<option value=7>Kej</option>
+    	<option value=8>Q'anil</option>
+    	<option value=9>Toj</option>
+    	<option value=10>Tzi'</option>
+    	<option value=11>B'atz</option>
+    	<option value=12>E'</option>
+    	<option value=13>Aj</option>
+    	<option value=14>I'x</option>
+    	<option value=15>Tz'ikin</option>
+    	<option value=16>Ajmaq</option>
+    	<option value=17>No'j</option>
+    	<option value=18>Tijax</option>
+    	<option value=19>Kawoq</option>
+    	<option value=20>Ajpu</option>
+   </select>
+
+    <br>
+   
+    <button onclick="getDay()">Set Date</button>
+  </div>
+
+  <div id="content">
+    <p>You have selected [ <span id="dateNumber"></span> <span id="dayLord"></span> ] as your date.
+      <br><br>
+    Your cross is as follows:
+    </p>
+  </div>
+
+<table class="cross">
+  <tr>
+    <td id="cross1">.</td>
+    <td id="cross2">.</td>
+    <td id="cross3">.</td>
+  </tr>
+  <tr>
+    <td id="cross4">.</td>
+    <td id="cross5"><strong>.</strong></td>
+    <td id="cross6">.</td>
+  </tr>
+  <tr>
+    <td id="cross7">.</td>
+    <td id="cross8">.</td>
+    <td id="cross9">.</td>
+  </tr>
+</table>
+
+<script>
+ 
+function convertDay(a) {
+	let tzolkin = a;
+	let day;
+	switch (tzolkin) {
+  		case 1: day = "Imox"; break;
+		case 2: day = "Iq"; break;
+		case 3: day = "Aq'ab'al"; break;
+		case 4: day = "K'at"; break;
+		case 5: day = "Kan"; break;
+		case 6: day = "Kame"; break;
+		case 7: day = "Kej"; break;
+		case 8: day = "Q'anil"; break;
+		case 9: day = "Toj"; break;
+		case 10: day = "Tzi'"; break;
+		case 11: day = "B'atz"; break;
+		case 12: day = "E'"; break;
+		case 13: day = "Aj"; break;
+		case 14: day = "I'x"; break;
+		case 15: day = "Tz'ikin"; break;
+		case 16: day = "Ajmaq"; break;
+		case 17: day = "No'j"; break;
+		case 18: day = "Tijax"; break;
+		case 19: day = "Kawoq"; break;
+		case 20: day = "Ajpu"; break;
+        default: day = ""; break;
+	}
+	return day;
+}
+//define variables
+let birthDayString, birthDayMath, birthDayName, birthNumString, birthNumMath;
+let cross1Num, cross2Num, cross3Num, cross4Num, cross6Num, cross7Num, cross8Num, cross9Num;
+let cross1Day, cross2Day, cross3Day, cross4Day, cross6Day, cross7Day, cross8Day, cross9Day;
+//grab values from dropdown
+function passValue() {
+	let x = document.getElementById("numberSelect").value;
+	birthNumString = (x == 0) ? "" : x;
+    birthNumMath = parseInt(birthNumString, 10);
+	birthDayString = document.getElementById("daySelect").value;
+	birthDayMath = parseInt(birthDayString, 10); 
+	birthDayName = convertDay(birthDayMath);   
+   	cross1Num = (birthNumMath < 2) ? (birthNumMath + 12) : (birthNumMath - 1);
+    cross2Num = (birthNumMath < 9) ? (birthNumMath + 5) : (birthNumMath - 8);
+    cross3Num = (birthNumMath < 3) ? (birthNumMath + 11) : (birthNumMath - 2);
+    cross4Num = (birthNumMath < 7) ? (birthNumMath + 7) : (birthNumMath - 6);
+    cross6Num = (birthNumMath < 8) ? (birthNumMath + 6) : (birthNumMath - 7);
+    cross7Num = (birthNumMath < 12) ? (birthNumMath + 2) : (birthNumMath - 11);
+    cross8Num = (birthNumMath < 6) ? (birthNumMath + 8) : (birthNumMath - 5);
+    cross9Num = (birthNumMath < 13) ? (birthNumMath + 1) : (birthNumMath - 12);
+    cross1Day = (birthDayMath < 15) ? (birthDayMath + 6) : (birthDayMath - 14);
+	cross2Day = (birthDayMath < 9) ? (birthDayMath + 12) : (birthDayMath - 8);
+	cross3Day = (birthDayMath < 3) ? (birthDayMath + 18) : (birthDayMath - 2);
+	cross4Day = (birthDayMath < 7) ? (birthDayMath + 14) : (birthDayMath - 6);
+	cross6Day = (birthDayMath < 15) ? (birthDayMath + 6) : (birthDayMath - 14);
+	cross7Day = (birthDayMath < 19) ? (birthDayMath + 2) : (birthDayMath - 18);
+	cross8Day = (birthDayMath < 13) ? (birthDayMath + 8) : (birthDayMath - 12);
+	cross9Day = (birthDayMath < 7) ? (birthDayMath + 14) : (birthDayMath - 6);
+}
+
+//display birthday
+function getDay() {
+	document.getElementById("dateNumber").innerHTML = birthNumString;
+	document.getElementById("dayLord").innerHTML = birthDayName;
+    
+   	document.getElementById("cross1").innerHTML = cross1Num.toString() + " " + convertDay(cross1Day);
+    document.getElementById("cross2").innerHTML = cross2Num.toString() + " " + convertDay(cross2Day);
+    document.getElementById("cross3").innerHTML = cross3Num.toString() + " " + convertDay(cross3Day);
+        
+    document.getElementById("cross4").innerHTML = cross4Num.toString() + " " + convertDay(cross4Day);
+    document.getElementById("cross5").innerHTML = birthNumString + " " + birthDayName;
+    document.getElementById("cross6").innerHTML = cross6Num.toString() + " " + convertDay(cross6Day);
+	
+	document.getElementById("cross7").innerHTML = cross7Num.toString() + " " + convertDay(cross7Day);
+    document.getElementById("cross8").innerHTML = cross8Num.toString() + " " + convertDay(cross8Day);
+    document.getElementById("cross9").innerHTML = cross9Num.toString() + " " + convertDay(cross9Day);
+}
+
+</script>
+
+</body>
+</html>

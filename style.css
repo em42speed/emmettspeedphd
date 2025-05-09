@@ -1,0 +1,266 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+/* 
+teal: 6, 148, 148 (teal)
+soft gold: 212, 175, 55 (goldenrod)
+coral: 255, 133, 89 (coral) 
+charcoal grey: 74, 74, 74 (dimgray)
+dusty rose: 220, 161, 161 (lightpink)
+cream: 253, 251, 212 (lightgoldenrodyellow)
+*/
+
+/*EDITED 5/8/2025 midnight*/
+
+
+body {
+  background: rgb(242,240,239);
+  color: dimgray;
+  font-family: "Times New Roman";
+  max-width: 1000px;
+  margin: auto;
+  }
+  
+a:visited {
+  color: dimgray;
+}
+
+a:link {
+  color: teal;
+}
+
+
+h1{ 
+  margin: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dotted teal;
+  padding: 20px;
+  max-width: 1000px;
+  } 
+
+
+.title h1{
+  font-family: Verdana;
+  border: 3px solid teal;
+  background: #F2E6EF;
+  background: radial-gradient(circle, rgba(242, 230, 239, 1) 0%, rgba(6, 148, 148, 0.58) 100%, rgba(6, 148, 148, 0.99) 100%);
+  text-align: center;
+  padding: 30px;
+  }
+
+#name h1{
+  margin: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dotted teal;  
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  }
+  
+  
+h2{
+  margin: auto; 
+  margin-top: 10px;
+  border: 2px dotted teal;
+  padding: 20px;
+  max-width: 1000px;
+  text-align: center;
+  } 
+
+h3{
+  margin: auto; 
+  margin-top: 10px;
+  max-width: 1000px;
+  }
+
+h4{
+  margin: auto; 
+  margin-top: 10px;
+  max-width: 1000px;
+  }
+
+p{
+  margin: auto; 
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1000px;
+  }
+
+.hanging p{
+  text-indent: -36px; 
+  padding-left: 36px;
+  max-width: 1000px;
+  }
+
+#contact {
+  text-align: center;
+}
+
+li{
+  margin: auto; 
+  padding-top: 10px;
+  max-width: 1000px;
+  }
+  
+#content {
+  margin: auto; 
+  padding-top: 30px;
+  max-width: 1000px;
+  }
+  
+  
+/* Maya Cross */  
+  
+.cross{ 
+  margin-left: auto;
+  margin-right: auto;
+  } 
+
+.cross table{  
+  border: 1px solid teal; 
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cross th, td {
+  padding: 15px;
+  text-align: center;
+}  
+  
+
+
+
+/* Navigation */
+
+.navigation {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 10px;
+  z-index: 1;
+  }
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(242,240,239);
+}
+
+.navigation li {
+  float: left;
+}
+
+.navigation li a {
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-right: 1px solid teal;
+}
+
+.navigation li:last-child {
+  border-right: none;
+}
+
+.active {
+  border-bottom: 2px solid teal;
+  color: rgb(242,240,239);
+}
+
+.navigation:hover {
+  background-color: teal;
+  color: rgb(242,240,239);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/*Grid Layout for CV*/
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu content content"
+    "footer footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  padding: 5px;
+  }
+
+.container > div {
+  padding: 10px;
+  }
+
+.container > div.title {
+  grid-area: header;
+  font-family: Verdana;
+  text-align: center;
+  padding: 30px;
+  max-width: 1000px;
+  }
+
+.container > table_of_contents {
+  grid-area: menu;
+  max-width: 200px;
+  }
+
+.container > cv {
+  grid-area: content;
+  max-width: 800px;
+  }
+
+.table_of_contents {
+  position: sticky;
+  top: 30px;
+  } 
+
+
+
+/*Buttons */
+
+
+.button {
+  background-color: rgb(242,240,239);
+  border: 1px solid teal;
+  border-radius: 12px;
+  color: dimgray;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 32px;
+  max-width: 75px;
+  margin: 0 auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.button1 {
+  background-color: rgb(242,240,239); 
+  color: dimgray; 
+  border: 2px solid teal;
+  border-radius: 12px;
+}
+
+.button1:hover {
+  background-color: teal;
+  color: rgb(242,240,239);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button1:active {
+  background-color: teal;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+  

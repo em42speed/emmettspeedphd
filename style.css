@@ -176,11 +176,6 @@ li{
   color: rgb(242,240,239);
 }
 
-.navigation:hover {
-  background-color: teal;
-  color: rgb(242,240,239);
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
 
 
 /*Grid Layout for CV*/
@@ -217,14 +212,22 @@ li{
   max-width: 800px;
   }
 
-.table_of_contents {
-  position: sticky;
-  top: 30px;
-  } 
+ 
 
+.table_of_contents {
+    position: sticky;
+    top: 50px;
+    height: fit-content;
+}
 
 
 /*Buttons */
+
+
+#buttons {
+  margin: auto;
+  width: fit-content;
+}
 
 
 .button {

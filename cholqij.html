@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./style.css' rel='stylesheet'>
+    <title>About Me | E.A. Speed</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+  </head>
+
+    <header>
+      <nav class="navigation">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-me.html">About Me</a></li>
+          <li><a href="./cv.html">CV</a></li> 
+          <li><a href="./services.html">Formatting Services</a></li>
+          <li class="active"><a href="#">Mayan Calendar</a></li>
+          <li><a href="style-guide.html">Style Guide</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+  <body> 
+
+    <div class="title">
+      <h1 id="title">Chol Q'ij</h1>
+    </div>
+    <section id="beginning"></section>    
+      <p>
+        This is a mockup for an interactive Mayan Calendar I'm planning to build as I get better at HTML, CSS, and Javascript.
+      </p>
+    </section>
+    <section id="selection">
+      <h2>What is your birthday?</h2>
+      <p>
+        Select your birthday from the dropdowns below. The first dropdown is the day of the month, and the second is the name of the month. The third dropdown is the year. 
+      </p>
+      <br><br>    
+        <label for="day">Day:</label>
+            <select id="day" name="day">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <!-- Add more options for days -->
+            </select>
+
+          <label for="month">Month:</label>
+            <select id="month" name="month">
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <!-- Add more options for months -->
+            </select>
+
+          <label for="year">Year:</label>
+            <select id="year" name="year">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <!-- Add more options for years -->
+            </select>
+
+        <button id="submit">Submit</button>
+    </section>
+    <div class="rotating_gears">
+      <p>These gears will rotate to show the result.</p>
+      <embed src="images/chol qij.png" width="500px"/>
+    </div>
+    <br><br>
+    <div class="explanation">
+      <h1 id="title">What is the Chol Q'ij?</h1>
+      <p>
+        Chol Q'ij is the Mayan calendar system, which consists of 20 day names and 13 month names. Each day name has its own unique meaning and significance, and the combination of a day name and a month name creates a specific date in the Mayan calendar.
+      </p>
+      <p>
+        The 20 day names are: 
+        <ul>
+          <li>Imox</li>
+          <li>Ik'</li>
+          <li>Ak'ab'al</li>
+          <!-- Add more day names -->
+        </ul>
+      </p>
+    </div>
+
+    <div class="results">
+      <h1 id="title">Your "Mayan Birthday"</h1>
+      <p id="result">Your result will appear here. Specific text for each of the 20 day names. Whole long paragraphs, absurd amounts of detail.</p>
+      <embed src="images/noj.png" width="100px"/>
+      <p id="result2">Your result will appear here. Specific text for each of the 13 month names.</p>
+
+    </div>
+    <br><br>
+    <div class="Mayan Cross">
+      <p><a href=mayacross.html>Mayan Cross</a> stuff from Emma comes in here.</p>
+    </div>
+    <div class="workscited">
+      <h1 id="title">Works Cited</h1>
+        <p>List of sources.</p>
+
+    </div>
+
+
+
+
+  </body>
+</html>

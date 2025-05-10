@@ -1,0 +1,152 @@
+body {
+  background: rgb(242,240,239);
+  color: dimgray;
+  font-family: "Times New Roman";
+  max-width: 1000px;
+  margin: auto;
+  }
+
+a:visited {
+  color: dimgray;
+}
+
+a:link {
+  color: teal;
+}
+
+.navigation {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 10px;
+  z-index: 1;
+  }
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(242,240,239);
+}
+
+.navigation li {
+  float: left;
+}
+
+.navigation li a {
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-right: 1px solid teal;
+}
+
+.navigation li:last-child {
+  border-right: none;
+}
+
+h1{ 
+  margin: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dotted teal;
+  padding: 20px;
+  max-width: 1000px;
+  text-align: center;
+  }
+
+.title h1{
+  font-family: Verdana;
+  border: 3px solid teal;
+  background: #F2E6EF;
+  background: radial-gradient(circle, rgba(242, 230, 239, 1) 0%, rgba(6, 148, 148, 0.58) 100%, rgba(6, 148, 148, 0.99) 100%);
+  text-align: center;
+  padding: 30px;
+  }
+
+
+h2{
+  margin: auto; 
+  margin-top: 10px;
+  border: 2px dotted teal;
+  padding: 20px;
+  max-width: 1000px;
+  text-align: center;
+  }
+
+.container-guide {
+    border: 2px solid #a2a2a6;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.color-container {
+    width: 100%;
+}
+
+.color-panel { 
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    margin: 20px auto;
+    min-height: 100px;
+    border: 1px solid rgb(74, 74, 74);
+}
+
+.teal {
+    background-color: rgb(6, 148, 148);
+    color: rgb(242, 240, 239);
+}
+
+.dimgray {
+    background-color: rgb(74, 74, 74);
+    color: rgb(242, 240, 239);
+}
+
+.off-white {
+    background-color: rgb(242, 240, 239);
+    color: rgb(74, 74, 74);
+}
+
+.font-panel {
+    width: 45%;
+    display: inline-block;
+}
+
+.font-label { 
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.regular {
+    font-style: normal;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.Verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.TNR {
+    font-family: 'Times New Roman', Times, serif
+}
+
+p{
+  margin: auto; 
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1000px;
+  color: dimgray;
+  font-family: "Times New Roman";  
+  }

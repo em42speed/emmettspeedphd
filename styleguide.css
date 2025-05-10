@@ -1,17 +1,26 @@
+  @font-face {
+    font-family: 'Mayan Open Sans';
+    src: url(fonts\mayan_num_open_sans.ttf);
+  }
+  @font-face {
+    font-family: 'Babelstone Mayan';
+    src: url(fonts\babelstone-mayan.otf);
+  }
+
 body {
-  background: rgb(242,240,239);
-  color: dimgray;
+  background: hsl(20, 10.34%, 94.31%);
+  color: hsl(0, 0%, 29.02%);
   font-family: "Times New Roman";
   max-width: 1000px;
   margin: auto;
   }
 
 a:visited {
-  color: dimgray;
+  color: hsl(0, 0%, 29.02%);
 }
 
 a:link {
-  color: teal;
+  color: hsl(180, 92.21%, 30.2%);
 }
 
 .navigation {
@@ -29,7 +38,7 @@ a:link {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(242,240,239);
+  background-color: hsl(20, 10.34%, 94.31%);
 }
 
 .navigation li {
@@ -41,18 +50,23 @@ a:link {
   text-align: center;
   padding: 5px 10px;
   text-decoration: none;
-  border-right: 1px solid teal;
+  border-right: 1px solid hsl(180, 92.21%, 30.2%);
 }
 
 .navigation li:last-child {
   border-right: none;
 }
 
+.navigation .active {
+  border-bottom: 2px solid teal;
+  color: rgb(242,240,239);
+}
+
 h1{ 
   margin: auto; 
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dotted teal;
+  border: 2px dotted hsl(180, 92.21%, 30.2%);
   padding: 20px;
   max-width: 1000px;
   text-align: center;
@@ -60,8 +74,8 @@ h1{
 
 .title h1{
   font-family: Verdana;
-  border: 3px solid teal;
-  background: #F2E6EF;
+  border: 3px solid hsl(180, 92.21%, 30.2%);
+  background: hsl(20, 10.34%, 94.31%);
   background: radial-gradient(circle, rgba(242, 230, 239, 1) 0%, rgba(6, 148, 148, 0.58) 100%, rgba(6, 148, 148, 0.99) 100%);
   text-align: center;
   padding: 30px;
@@ -71,74 +85,85 @@ h1{
 h2{
   margin: auto; 
   margin-top: 10px;
-  border: 2px dotted teal;
+  border: 2px dotted hsl(180, 92.21%, 30.2%);
   padding: 20px;
   max-width: 1000px;
   text-align: center;
   }
 
 .container-guide {
-    border: 2px solid #a2a2a6;
-    padding: 10px;
-    margin: 10px auto;
+  border: 2px solid hsl(0, 0%, 29.02%);
+  padding: 10px;
+  margin: 10px auto;
 }
 
 .color-container {
-    width: 100%;
+  width: 100%;
 }
 
 .color-panel { 
-    display: inline-block;
-    width: 32%;
-    text-align: center;
-    margin: 20px auto;
-    min-height: 100px;
-    border: 1px solid rgb(74, 74, 74);
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 20px auto;
+  min-height: 100px;
+  border: 1px solid hsl(0, 0%, 29.02%);
 }
 
 .teal {
-    background-color: rgb(6, 148, 148);
-    color: rgb(242, 240, 239);
+  background-color: hsl(180, 92.21%, 30.2%);
+  color: hsl(20, 10.34%, 94.31%);
+  font-weight: 700;
 }
 
 .dimgray {
-    background-color: rgb(74, 74, 74);
-    color: rgb(242, 240, 239);
+  color: hsl(180, 92.21%, 30.2%); 
+  background-color: hsl(0, 0%, 29.02%);
+  font-weight: 700;
 }
 
 .off-white {
-    background-color: rgb(242, 240, 239);
-    color: rgb(74, 74, 74);
+  background-color: hsl(20, 10.34%, 94.31%);
+  color: hsl(0, 0%, 29.02%);
+  font-weight: 700;
 }
 
 .font-panel {
-    width: 45%;
-    display: inline-block;
+  width: 45%;
+  display: inline-block;
 }
 
 .font-label { 
-    font-size: 20px;
-    text-decoration: underline;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 .regular {
-    font-style: normal;
+  font-style: normal;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .Verdana {
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .TNR {
-    font-family: 'Times New Roman', Times, serif
+  font-family: 'Times New Roman', Times, serif
+}
+
+.Mayan-Open{
+  font-family: 'Mayan Open Sans', sans-serif;
+}
+
+.Babelstone {
+  font-family: 'Babelstone Mayan', sans-serif;
 }
 
 p{
@@ -147,6 +172,6 @@ p{
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1000px;
-  color: dimgray;
+  color: hsl(0, 0%, 29.02%);
   font-family: "Times New Roman";  
   }

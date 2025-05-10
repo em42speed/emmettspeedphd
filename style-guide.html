@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='./styleguide.css' rel='stylesheet'>
+  <link href='./style.css' rel='stylesheet'>
   <title>Home | E.A. Speed</title>
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
@@ -33,18 +33,36 @@
   <div class="container-guide">
     <h1>Color Swatches</h1>
     <div class="color-container">
-      <div class="color-panel teal">
+      <div class="color-panel" id="teal">
         <p class="color-label">Teal</p>
-        <p class="color-rgb"> hsl(180, 92.21%, 30.2%)</p>
+        <p class="color-hsl">HSL(180, 92.21%, 30.2%)</p>
+        <p class="color-hex">HEX #0A9090</p>
+        <p class="color-rgb">RGB(10, 144, 144)</p>
       </div>    
-      <div class="color-panel dimgray">
+      <div class="color-panel" id="dimgray">
         <p class="color-label">Dim Gray</p>
-        <p class="color-rgb">hsl(0, 0%, 29.02%)</p>
+        <p class="color-hsl">HSL(0, 0%, 29.02%)</p>
+        <p class="color-hex">HEX #4A4A4A</p>
+        <p class="color-rgb">RGB(74, 74, 74)</p>
       </div>
-      <div class="color-panel off-white">
-        <p class="color-label">Off-White</p>
-        <p class="color-rgb">hsl(20, 10.34%, 94.31%)</p>
+      <div class="color-panel" id="off-white">
+        <p class="color-label">White Smoke</p>
+        <p class="color-hsl">HSL(6, 10%, 94%)</p>
+        <p class="color-hex">HEX #F2EFE9</p>
+        <p class="color-rgb">RGB(242, 239, 233)</p>
       </div>
+      <div class="color-panel" id="african-violet">
+        <p class="color-label">African Violet</p>
+        <p class="color-hsl">HSL(268.4, 30.2%, 62.9%)</p>
+        <p class="color-hex">HEX #9F84BD</p>
+        <p class="color-rgb">RBG(159, 132, 189)</p>
+      </div>
+      <div class="color-panel" id="navy-blue">
+        <p class="color-label">Navy Blue</p>
+        <p class="color-hsl">HSL(248.3, 92%, 24.5%)</p>
+        <p class="color-hex">HEX #150578</p>
+        <p class="color-rgb">RGB(21, 5, 120)</p>
+      </div>            
     </div>    
   </div>
   <div class="container-guide">
@@ -145,7 +163,7 @@
           <ul>
             <li>Font: Times New Roman</li>
             <li>Color: Dim Gray</li>
-            <li>Border: 2px dotted Teal</li>
+            <li>Bottom Border: 2px dotted Teal</li>
             <li>Text Alignment: Center</li>
           </ul>
       </div>
@@ -160,7 +178,8 @@
     </div>
   </div>
 
-
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="0946560120697513">new CoolorsPaletteWidget("0946560120697513", ["0a9090","4a4a4a","9f84bd","f2f0ef","150578"]); </script>
 
 </body>
 </html>

@@ -1,33 +1,64 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
 
-/* 
-teal: 6, 148, 148 (teal)
-soft gold: 212, 175, 55 (goldenrod)
-coral: 255, 133, 89 (coral) 
-charcoal grey: 74, 74, 74 (dimgray)
-dusty rose: 220, 161, 161 (lightpink)
-cream: 253, 251, 212 (lightgoldenrodyellow)
+/* CSS HEX
+dark-cyan: #0a9090ff;
+davys-gray: #4a4a4aff;
+african-violet: #9f84bdff;
+white-smoke: #f2f0efff;
+navy-blue: #150578ff;*/
+
+/* CSS HSL
+dark-cyan: hsla(180, 87%, 30%, 1);
+davys-gray: hsla(0, 0%, 29%, 1);
+african-violet: hsla(268, 30%, 63%, 1);
+white-smoke: hsla(20, 10%, 94%, 1);
+navy-blue: hsla(248, 92%, 25%, 1);*/
+
+/* SCSS HEX
+dark-cyan: #0a9090ff;
+davys-gray: #4a4a4aff;
+african-violet: #9f84bdff;
+white-smoke: #f2f0efff;
+navy-blue: #150578ff;*/
+
+/* SCSS HSL 
+dark-cyan: hsla(180, 87%, 30%, 1);
+davys-gray: hsla(0, 0%, 29%, 1);
+african-violet: hsla(268, 30%, 63%, 1);
+white-smoke: hsla(20, 10%, 94%, 1);
+navy-blue: hsla(248, 92%, 25%, 1);*/
+
+/* SCSS RGB 
+dark-cyan: rgba(10, 144, 144, 1);
+davys-gray: rgba(74, 74, 74, 1);
+african-violet: rgba(159, 132, 189, 1);
+white-smoke: rgba(242, 240, 239, 1);
+navy-blue: rgba(21, 5, 120, 1);
 */
 
-/*EDITED 5/8/2025 midnight*/
 
+@font-face {
+  font-family: 'Mayan Open Sans';
+  src: url(fonts\mayan_num_open_sans.ttf);
+  }
+@font-face {
+  font-family: 'Babelstone Mayan';
+  src: url(fonts\babelstone-mayan.otf);
+  }
 
 body {
-  background: rgb(242,240,239);
-  color: dimgray;
+  background: hsl(6, 10%, 94%);
+  color: hsl(0, 0%, 29.02%);
   font-family: "Times New Roman";
   max-width: 1000px;
   margin: auto;
   }
   
 a:visited {
-  color: dimgray;
+  color: hsl(268.4, 30.2%, 62.9%);
 }
 
 a:link {
-  color: teal;
+  color: hsl(248.3, 92%, 24.5%);
 }
 
 
@@ -38,56 +69,39 @@ h1{
   border: 2px dotted teal;
   padding: 20px;
   max-width: 1000px;
+  text-align: center
   } 
 
 
 .title h1{
   font-family: Verdana;
   border: 3px solid teal;
-  background: #F2E6EF;
+  background: hsl(6, 10%, 94%);
   background: radial-gradient(circle, rgba(242, 230, 239, 1) 0%, rgba(6, 148, 148, 0.58) 100%, rgba(6, 148, 148, 0.99) 100%);
   text-align: center;
   padding: 30px;
   }
 
-#name h1{
-  margin: auto; 
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dotted teal;  
-  font-weight: bold;
-  text-align: center;
-  font-size: 30px;
-  }
-  
   
 h2{
   margin: auto; 
   margin-top: 10px;
-  border: 2px dotted teal;
-  padding: 20px;
+  border-bottom: 2px dotted teal;
+  padding: 30px, 30px, 5px, 30px;
   max-width: 1000px;
   text-align: center;
   } 
 
-h3{
+h3, h4, p{
   margin: auto; 
   margin-top: 10px;
   max-width: 1000px;
   }
 
-h4{
-  margin: auto; 
-  margin-top: 10px;
-  max-width: 1000px;
-  }
 
 p{
-  margin: auto; 
-  padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 1000px;
   }
 
 .hanging p{
@@ -110,6 +124,8 @@ li{
   margin: auto; 
   padding-top: 30px;
   max-width: 1000px;
+  line-height: 1.5;
+  text-indent: 40px;
   }
   
   
@@ -135,7 +151,7 @@ li{
 
 
 
-/* Navigation */
+/* Navigation Menu*/
 
 .navigation {
   font-weight: 100;
@@ -152,7 +168,7 @@ li{
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(242,240,239);
+  background-color: hsl(6,10%,94%);;
 }
 
 .navigation li {
@@ -164,7 +180,9 @@ li{
   text-align: center;
   padding: 5px 10px;
   text-decoration: none;
-  border-right: 1px solid teal;
+  border-right: 1px solid hsl(248.3, 92%, 24.5%);
+  color: hsl(248.3, 92%, 24.5%);
+  background-color: hsl(6, 10%, 94%);
 }
 
 .navigation li:last-child {
@@ -172,8 +190,7 @@ li{
 }
 
 .navigation .active {
-  border-bottom: 2px solid teal;
-  color: rgb(242,240,239);
+  border-bottom: 2px solid hsl(248.3, 92%, 24.5%);
 }
 
 
@@ -198,8 +215,8 @@ li{
   grid-area: header;
   font-family: Verdana;
   text-align: center;
-  padding: 30px;
-  max-width: 1000px;
+  padding: 30px 30px 30px 0;
+  width: 100%;
   }
 
 .container > table_of_contents {
@@ -231,10 +248,10 @@ li{
 
 
 .button {
-  background-color: rgb(242,240,239);
+  background-color: hsl(6, 10%, 94%);;
   border: 1px solid teal;
   border-radius: 12px;
-  color: dimgray;
+  color: hsl(0, 0%, 29.02%);
   font-size: 16px;
   text-align: center;
   text-decoration: none;
@@ -248,22 +265,113 @@ li{
 }
 
 .button1 {
-  background-color: rgb(242,240,239); 
-  color: dimgray; 
+  background-color: hsl(6, 10%, 94%);; 
+  color: hsl(0, 0%, 29.02%); 
   border: 2px solid teal;
   border-radius: 12px;
+  font-family: Verdana;
+  text-transform: lowercase;
+  font-weight: 700;
 }
 
 .button1:hover {
-  background-color: teal;
-  color: rgb(242,240,239);
+  background-color: hsl(180, 92.21%, 30.2%);
+  color: hsl(6, 10%, 94%);
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .button1:active {
-  background-color: teal;
-  box-shadow: 0 5px #666;
+  background-color: hsl(180, 92.21%, 30.2%);
+  box-shadow: 0 5px hsl(0, 0%, 29.02%);
   transform: translateY(4px);
 }
 
-  
+/* Style Guide */
+
+.container-guide {
+  border: 2px solid hsl(0, 0%, 29.02%);
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.color-container {
+  width: 100%;
+}
+
+.color-panel { 
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  margin: 20px auto;
+  min-height: 100px;
+  border: 1px solid hsl(0, 0%, 29.02%);
+}
+
+#teal {
+  background-color: hsl(180, 92.21%, 30.2%);
+  color: hsl(6, 10%, 94%);
+  font-weight: 700;
+}
+
+#dimgray {
+  color: hsl(6, 10%, 94%); 
+  background-color: hsl(0, 0%, 29.02%);
+  font-weight: 700;
+}
+
+#off-white {
+  background-color: hsl(6,10%,94%);
+  color: hsl(0, 0%, 29.02%);
+  font-weight: 700;
+}
+
+#african-violet {
+  background-color: hsl(268.4,30.2%,62.9%);
+  font-weight: 700;
+  color:  hsl(6, 10%, 94%);
+}
+
+#navy-blue {
+  background-color: hsl(248.3,92%,24.5%);
+  font-weight: 700;
+  color: hsl(6, 10%, 94%);
+}
+
+.font-panel {
+  width: 45%;
+  display: inline-block;
+}
+
+.font-label { 
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.regular {
+  font-style: normal;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.Verdana {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.TNR {
+  font-family: 'Times New Roman', Times, serif
+}
+
+.Mayan-Open{
+  font-family: 'Mayan Open Sans', sans-serif;
+}
+
+.Babelstone {
+  font-family: 'Babelstone Mayan', sans-serif;
+}
+

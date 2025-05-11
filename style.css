@@ -273,7 +273,7 @@ footer{
   border-radius: 12px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: hsla(20, 10%, 94%, 1);; 
+  background-color: hsla(20, 10%, 94%, 1); 
   color: hsl(0, 0%, 29.02%); 
 }
 

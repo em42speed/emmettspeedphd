@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         
+        
         {
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "g:\\My Drive\\Obsidian Vault\\webdev projects\\neocities-speedphd\\index.html"
+            "file": "g:\\My Drive\\Obsidian Vault\\webdev projects\\emmettspeedphd\\index.html"
         }
     ]
 }

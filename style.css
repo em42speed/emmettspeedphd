@@ -1,21 +1,42 @@
 /*
-1. Typography
-2. Navigation Menu
-3. Grid Layout for CV
-4. Buttons
-5. Maya Cross
-6. Style Guide
-7. Color Palette
+1. Basics
+2. Typography
+3. Navigation Menu
+4. Grid Layout for CV
+5. Buttons
+6. Images
+7. Maya Cross
+8. Style Guide
+9. Color Palette
 */
-
 
 
 /*
-1. Typography
+1. Basics
 ============================
 */
 
+html,
+body { 
+  font-size: 20px;
+  background: hsl(6, 10%, 94%);
+  color: hsl(0, 0%, 29.02%);
+  font-family: "Times New Roman";
+}
 
+body {
+  max-width: 1000px;
+  margin: auto;
+  }
+
+@media only screen and (min-width: 360px) and (max-width: 420px) {
+  /* CSS rules for phones*/
+}
+
+/*
+2. Typography
+============================
+*/
 
 @font-face {
   font-family: 'Mayan Open Sans';
@@ -26,13 +47,7 @@
   src: url(fonts\babelstone-mayan.otf);
   }
 
-body {
-  background: hsl(6, 10%, 94%);
-  color: hsl(0, 0%, 29.02%);
-  font-family: "Times New Roman";
-  max-width: 1000px;
-  margin: auto;
-  }
+
   
 a:visited {
   color: hsl(268.4, 30.2%, 62.9%);
@@ -45,11 +60,10 @@ a:link {
 
 h1{ 
   margin: auto; 
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 1rem;
   border: 2px dotted teal;
-  padding: 20px;
-  max-width: 1000px;
+  padding: 1rem;
+  max-height: 100px;
   text-align: center
   } 
 
@@ -60,36 +74,33 @@ h1{
   background: hsla(20, 10%, 94%, 1);
   background: radial-gradient(circle, rgba(242, 230, 239, 1) 0%, rgba(6, 148, 148, 0.58) 100%, rgba(6, 148, 148, 0.99) 100%);
   text-align: center;
-  padding: 30px;
-  margin-top: 30px;
+  padding: 1.5rm;
+  margin-top: 1.5rem;
   }
 
   
 h2{
   margin: auto; 
-  margin-top: 10px;
+  margin-top: .5rem;
   border-bottom: 2px dotted teal;
-  padding: 30px, 30px, 5px, 30px;
-  max-width: 1000px;
+  padding: 1.5rem, 1.5rem, .25rem, 1.5rem;
   text-align: center;
   } 
 
 h3, h4, p{
   margin: auto; 
-  margin-top: 10px;
-  max-width: 1000px;
+  margin-top: .5rem;
   }
 
 
 p{
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   }
 
 .hanging p{
-  text-indent: -36px; 
-  padding-left: 36px;
-  max-width: 1000px;
+  text-indent: -1.8rem; 
+  padding-left: 1.8rem;
   }
 
 #contact {
@@ -98,45 +109,56 @@ p{
 
 li{
   margin: auto; 
-  padding-top: 10px;
-  max-width: 1000px;
+  padding-top: .5rem;
   }
  
-.content{
-  margin: 30px auto; 
-  padding-top: 10px;
+main{
+  margin: 1.5rem auto; 
   max-width: 1000px;
   line-height: 1.5;
 }
 
 #about-me {
-  text-indent: 40px;
+  text-indent: 2rem;
   }
 
 .handcoded img{
   display: block;
   margin: auto;
-  padding: 5px;
+  padding: .25rem;
   }
 
-footer{
-  margin: 20px auto;
+.updates{
+  height: auto;
+  width: 75%;
+  border: .1rem solid hsl(268.4, 30.2%, 62.9%);
+  padding: .5rem;
+  margin: auto;
 }
-  
+
+
+footer{
+  margin: 1rem auto;
+}
+
+
+
+
 
 /*
-2. Navigation Menu
+3. Navigation Menu
 ============================
 */
 
-.navigation {
+nav {
   font-weight: 100;
-  letter-spacing: 2px;
-  padding: 10px;
+  letter-spacing: .1rem;
+  padding: .5rem;
   z-index: 1;
+  font-size: .75rem;
   }
 
-.navigation ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -147,32 +169,33 @@ footer{
   background-color: hsla(20, 10%, 94%, 1);;
 }
 
-.navigation li {
+nav li {
   float: left;
 }
 
-.navigation li a {
+nav li a {
   display: block;
   text-align: center;
-  padding: 5px 10px;
+  padding: .25rem .5rem;
   text-decoration: none;
-  border-right: 1px solid hsl(248.3, 92%, 24.5%);
+  border-left: 1px solid hsl(248.3, 92%, 24.5%);
   color: hsl(248.3, 92%, 24.5%);
   background-color: hsla(20, 10%, 94%, 1);
 }
 
-.navigation li:last-child {
-  border-right: none;
+nav li:last-child {
+  border-right: 1px solid hsl(248.3, 92%, 24.5%);
 }
 
-.navigation .active {
+nav .active {
   border-bottom: 2px solid hsl(248.3, 92%, 24.5%);
+  font-weight: bold;
 }
 
 
 
 /*
-3. Grid Layout for CV
+4. Grid Layout for CV
 ===========================
 */
 
@@ -180,43 +203,43 @@ footer{
   line-height: 1.5;
 }
 
-.container {
+.cvcontainer {
   display: grid;
   grid-template-areas:
     "header header header"
     "menu content content"
     "footer footer footer";
   grid-template-columns: 1fr 3fr;
-  gap: 5px;
-  padding: 5px;
+  gap: .25rem;
+  padding: .25rem;
   }
 
-.container > div.title {
+.cvcontainer > div.title {
   grid-area: header;
   width: 100%;
   }
 
-.container > table_of_contents {
+.cvcontainer > table_of_contents {
   grid-area: menu;
   max-width: 200px;
-  padding: 10px;
+  padding: .5rem;
   }
 
-.container > cv {
+.cvcontainer > cv {
   grid-area: content;
   max-width: 800px;
-  padding: 10px;
+  padding: .5rem;
   }
 
 .table_of_contents {
     position: sticky;
-    top: 50px;
+    top: 2.5rem;
     height: fit-content;
 }
 
 
 /*
-4. Buttons 
+5. Buttons 
 ================================
 */
 
@@ -228,37 +251,58 @@ footer{
 
 .button {
   list-style-type: none;
-  font-size: 16px;
+  font-size: .75rem;
   font-family: Verdana;
   text-transform: lowercase;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  padding: 16px 32px;
-  margin: 30px, 5px;
-  border: 2px solid teal;
-  border-radius: 12px;
-  transition-duration: 0.4s;
+  padding: .75rem 1.25rem;
+  margin: 1.5rem, .25rem;
+  border: 2px solid hsl(248.3, 92%, 24.5%);
+  border-radius: .6rem;
+
   cursor: pointer;
   background-color: hsla(20, 10%, 94%, 1); 
   color: hsl(0, 0%, 29.02%); 
 }
 
 .button:hover {
-  background-color: hsl(180, 92.21%, 30.2%);
+  background-color: hsl(268.4, 30.2%, 62.9%);
   color: hsla(20, 10%, 94%, 1);
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 .6rem .8rem 0 rgba(0,0,0,0.24), 0 .85rem 2.5rem 0 rgba(0,0,0,0.19);
+  transition: color 0.5s, box-shadow 0.5s;
 }
 
 .button:active {
-  background-color: hsl(180, 92.21%, 30.2%);
-  box-shadow: 0 5px hsl(0, 0%, 29.02%);
+  background-color: hsl(268.4, 30.2%, 62.9%);
+  box-shadow: 0 .25rem hsl(0, 0%, 29.02%);
   transform: translateY(4px);
 }
 
+
 /*
-5. Maya Cross 
+6. Images
+============================
+*/
+
+.imagecontainer {
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.imagecontainer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/*
+7. Maya Cross 
 ============================
 */  
   
@@ -275,20 +319,20 @@ footer{
 }
 
 .cross th, td {
-  padding: 15px;
+  padding: .75rem;
   text-align: center;
 }  
 
 
 /* 
-6. Style Guide 
+8. Style Guide 
 ============================
 */
 
 .container-guide {
-  border: 2px solid hsl(0, 0%, 29.02%);
-  padding: 10px;
-  margin: 10px auto;
+  border: .1rem solid hsl(0, 0%, 29.02%);
+  padding: .5rem;
+  margin: .5rem auto;
 }
 
 .color-container {
@@ -299,7 +343,7 @@ footer{
   display: inline-block;
   width: 32%;
   text-align: center;
-  margin: 20px auto;
+  margin: 1rem auto;
   min-height: 100px;
   border: 1px solid hsl(0, 0%, 29.02%);
 }
@@ -340,7 +384,7 @@ footer{
 }
 
 .font-label { 
-  font-size: 20px;
+  font-size: 1rem;
   text-decoration: underline;
 }
 
@@ -374,7 +418,7 @@ footer{
 
 
 /*
-7. Color Palette
+9. Color Palette
 ===========================
 */  
 

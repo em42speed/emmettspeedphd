@@ -31,6 +31,9 @@ body {
 
 @media only screen and (min-width: 360px) and (max-width: 420px) {
   /* CSS rules for phones*/
+  .button{
+    display:block;
+  }
 }
 
 /*
@@ -63,8 +66,9 @@ h1{
   margin-top: 1rem;
   border: 2px dotted teal;
   padding: 1rem;
-  max-height: 100px;
-  text-align: center
+  max-height: 200px;
+  text-align: center;
+  font-size: 2rem;
   } 
 
 
@@ -156,6 +160,7 @@ nav {
   padding: .5rem;
   z-index: 1;
   font-size: .75rem;
+  height: 1rem;
   }
 
 nav ul {
@@ -166,7 +171,7 @@ nav ul {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: hsla(20, 10%, 94%, 1);;
+  background-color: hsla(20, 10%, 94%, 1);
 }
 
 nav li {
@@ -221,13 +226,13 @@ nav .active {
 
 .cvcontainer > table_of_contents {
   grid-area: menu;
-  max-width: 200px;
+  max-width: 10rem;
   padding: .5rem;
   }
 
 .cvcontainer > cv {
   grid-area: content;
-  max-width: 800px;
+  max-width: 40rem;
   padding: .5rem;
   }
 
@@ -250,7 +255,6 @@ nav .active {
 }
 
 .button {
-  list-style-type: none;
   font-size: .75rem;
   font-family: Verdana;
   text-transform: lowercase;
@@ -262,7 +266,6 @@ nav .active {
   margin: 1.5rem, .25rem;
   border: 2px solid hsl(248.3, 92%, 24.5%);
   border-radius: .6rem;
-
   cursor: pointer;
   background-color: hsla(20, 10%, 94%, 1); 
   color: hsl(0, 0%, 29.02%); 
@@ -344,7 +347,7 @@ nav .active {
   width: 32%;
   text-align: center;
   margin: 1rem auto;
-  min-height: 100px;
+  min-height: 5rem;
   border: 1px solid hsl(0, 0%, 29.02%);
 }
 

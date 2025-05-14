@@ -29,12 +29,31 @@ body {
   margin: auto;
   }
 
-@media only screen and (min-width: 360px) and (max-width: 420px) {
-  /* CSS rules for phones*/
+@media only screen and (max-width: 800px) {
+  .cvgrid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .cv_toc{
+    display: none;
+  }
+  nav {
+    min-height: 1.5rem;
+    width: 100%;
+  }
   .button{
     display:block;
   }
+
+
 }
+
+
+
+
 
 /*
 2. Typography
@@ -140,7 +159,6 @@ main{
   margin: auto;
 }
 
-
 footer{
   margin: 1rem auto;
 }
@@ -159,7 +177,7 @@ nav {
   letter-spacing: .1rem;
   padding: .5rem;
   z-index: 1;
-  font-size: .75rem;
+  font-size: 1rem;
   height: 1rem;
   }
 
@@ -200,46 +218,38 @@ nav .active {
 
 
 /*
-4. Grid Layout for CV
+4. Grid Layout for CV - take 2
 ===========================
 */
 
-.cv {
-  line-height: 1.5;
+.cvgrid{ 
+  display: grid;
+  width: 50rem;                                         
+  grid-template: repeat(1, 1fr) / 1fr 3fr;
+  gap: .5rem; 
 }
 
-.cvcontainer {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "menu content content"
-    "footer footer footer";
-  grid-template-columns: 1fr 3fr;
-  gap: .25rem;
-  padding: .25rem;
+
+
+.cv_toc{
+  grid-area: 2/1/3/2;
+  position: sticky;
+  top: 2.5rem;
+  height: fit-content;
+}
+
+.cv_content li{
+  list-style: none;
+}
+
+.cv_content .hanging li{
+  text-indent: -1.8rem; 
+  padding-left: 1.8rem;
   }
 
-.cvcontainer > div.title {
-  grid-area: header;
-  width: 100%;
-  }
 
-.cvcontainer > table_of_contents {
-  grid-area: menu;
-  max-width: 10rem;
-  padding: .5rem;
-  }
-
-.cvcontainer > cv {
-  grid-area: content;
-  max-width: 40rem;
-  padding: .5rem;
-  }
-
-.table_of_contents {
-    position: sticky;
-    top: 2.5rem;
-    height: fit-content;
+.cv_title {
+  grid-area: 1/1/1/3;
 }
 
 

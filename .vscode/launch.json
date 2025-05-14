@@ -6,6 +6,10 @@
     "configurations": [
 
 
+
+
+
+
         
         {
             "type": "chrome",
@@ -13,5 +17,14 @@
             "name": "Open index.html",
             "file": "g:\\My Drive\\Obsidian Vault\\webdev projects\\emmettspeedphd\\index.html"
         }
+
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open cholqij.html",
+            "file": "g:\\My Drive\\Obsidian Vault\\webdev projects\\emmettspeedphd\\cholqij.html"
+        }
+
     ]
 }

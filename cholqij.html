@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3G97VPPW2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N3G97VPPW2');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='./style.css' rel='stylesheet'>
@@ -1532,7 +1541,7 @@
                 document.getElementById("dateNumber").textContent = mc_birthNum;
                 document.getElementById("dayLord").textContent = mc_birthDayNameString;
 
-                // Calculate numbers for the cross based on your script's offsets
+                // Calculate numbers for the cross based on offsets
                 mc_crossValues.num1 = getCrossNumber(mc_birthNum, -1);
                 mc_crossValues.num2 = getCrossNumber(mc_birthNum, +5);
                 mc_crossValues.num3 = getCrossNumber(mc_birthNum, -2);
@@ -1543,7 +1552,7 @@
                 mc_crossValues.num8 = getCrossNumber(mc_birthNum, +8);
                 mc_crossValues.num9 = getCrossNumber(mc_birthNum, +1);
 
-                // Calculate day names for the cross based on your script's offsets
+                // Calculate day names for the cross based on offsets
                 mc_crossValues.day1 = getCholqijNameFromOneBasedIndex(getCrossDayIndex(birthDayIndex_1_to_20, +6));
                 mc_crossValues.day2 = getCholqijNameFromOneBasedIndex(getCrossDayIndex(birthDayIndex_1_to_20, +12));
                 mc_crossValues.day3 = getCholqijNameFromOneBasedIndex(getCrossDayIndex(birthDayIndex_1_to_20, -2));

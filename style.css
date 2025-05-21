@@ -414,6 +414,10 @@ a.button,
   display: block;
 }
 
+.abacus-animation {
+  float: left;
+}
+
 /*
 7. Chol Q'ij 
 ============================

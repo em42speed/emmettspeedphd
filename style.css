@@ -48,13 +48,24 @@ body {
     display: none;
   }
   nav {
-    min-height: 1.5rem;
+    min-height: 1rem;
     width: 100%;
+    margin-bottom: 2rem;
+    font-size: .4rem;
+    padding: .2rem;
+    height: auto;
+  }
+    nav ul {
+      padding: 0;
+    }
+  nav li a {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.7em;
   }
   .button {
     display: block;
   }
-  ..cq_container,
+  .cq_container,
   .cq_warning,
   .cq_results,
   .description-section {
@@ -64,7 +75,6 @@ body {
     margin-right: auto !important;
     margin-top: 2rem !important;
     box-sizing: border-box;
-    text-align: center !important; /* Add this line */
   }
   .imagecontainer,
   .cq_rotating_gears {
@@ -85,6 +95,13 @@ body {
   }
   .imagecontainer img {
     max-width: 400px;
+  }
+  table.cross {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  table.cross td {
+    padding: .1px .25px;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -205,9 +222,9 @@ footer {
   margin: 1rem auto;
 }
 
-.cq_explanation strong,
-#about-me strong {
-  color: var(--navy-blue);
+figcaption {
+  padding-bottom: .25rem;
+  padding-left: .25rem;
 }
 
 /*
@@ -221,7 +238,7 @@ nav {
   padding: 0.5rem;
   z-index: 1;
   font-size: 1rem;
-  height: 1rem;
+  height: auto;
 }
 
 nav ul {
@@ -254,7 +271,7 @@ nav li:last-child {
 }
 
 nav .active {
-  border-bottom: 2px solid var(--navy-blue);
+  background-color: var(--navy-blue);
   font-weight: bold;
 }
 
@@ -380,7 +397,7 @@ a.button,
   text-align: center;
 }
 
-.cq_explanation {
+.cq_explanation p{
   text-indent: 2.5rem;
   line-height: 1.5;
 }
@@ -447,6 +464,10 @@ h5 {
 .description-section ul {
   margin-top: 0.3em;
   padding-left: 1rem;
+}
+.cq_explanation strong,
+#about-me strong {
+  color: var(--navy-blue);
 }
 
 /* Mayan Cross Styles */

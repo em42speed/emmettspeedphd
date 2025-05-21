@@ -42,10 +42,14 @@ body {
   .cvgrid {
     max-width: 100% !important;
     width: 100% !important;
-    margin: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   .cv_toc {
     display: none;
+  }
+  #name {
+    margin: center;
   }
   nav {
     min-height: 1rem;

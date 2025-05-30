@@ -48,13 +48,13 @@ body {
     margin: 0 auto !important;
     box-sizing: border-box;
   }
-  .cv_toc{
+  .cv_toc {
     display: none;
   }
   .cvgrid {
     display: block !important;
   }
-  .cv_content>div {
+  .cv_content > div {
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -90,8 +90,8 @@ body {
     min-height: 1rem;
     width: 100%;
     margin-bottom: 2rem;
-    font-size: .4rem;
-    padding: .2rem;
+    font-size: 0.4rem;
+    padding: 0.2rem;
     height: auto;
   }
   nav ul {
@@ -140,7 +140,7 @@ body {
     font-size: 0.7rem;
   }
   table.cross td {
-    padding: .1px .25px;
+    padding: 0.1px 0.25px;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -228,6 +228,10 @@ p {
   padding-left: 1.8rem;
 }
 
+.hanging li {
+  font-size: 0.75rem;
+}
+
 #contact {
   text-align: center;
 }
@@ -262,8 +266,12 @@ footer {
 }
 
 figcaption {
-  padding-bottom: .25rem;
-  padding-left: .25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.hidden {
+  display: none;
 }
 
 /*
@@ -314,7 +322,7 @@ nav .active {
   font-weight: bold;
 }
 
-nav a:visited{
+nav a:visited {
   color: var(--teal);
 }
 
@@ -371,7 +379,7 @@ nav a:visited{
   text-align: center !important;
   text-decoration: none;
   display: inline-block;
-  margin: .5rem 0.25rem;
+  margin: 0.5rem 0.25rem;
   border: 2px solid var(--navy-blue);
   border-radius: 0.6rem;
   cursor: pointer;
@@ -444,7 +452,7 @@ a.button,
   text-align: center;
 }
 
-.cq_explanation p{
+.cq_explanation p {
   text-indent: 2.5rem;
   line-height: 1.5;
 }

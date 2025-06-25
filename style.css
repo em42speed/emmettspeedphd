@@ -247,6 +247,14 @@ main {
   text-indent: 2rem;
 }
 
+#about-me ul,
+#about-me ul ul,
+#about-me li,
+#about-me ul li {
+  text-indent: 0 !important;
+  padding-left: 1.5rem;
+}
+
 .handcoded img {
   display: block;
   margin: auto;

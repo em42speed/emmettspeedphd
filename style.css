@@ -37,6 +37,18 @@ body {
   margin: auto;
 }
 
+@media only screen and (min-width: 800px) {
+  body {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    max-width: 65%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   body,
   .cvgrid,
@@ -143,29 +155,57 @@ body {
     padding: 0.1px 0.25px;
   }
 }
-@media only screen and (min-width: 800px) {
-  body {
-    max-width: 75%;
+
+.index-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.index-container main {
+  flex: 4 1 0;
+  min-width: 0;
+}
+
+.index-container .updates {
+  flex: 0 0 20%;
+  max-width: 20vw;
+  min-width: 200px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: #f8f8ff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 800px) {
+  .index-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+  .index-container main,
+  .index-container .updates {
+    flex: unset;
+    max-width: 90%;
+    min-width: 0;
+    max-height: none;
+    margin-top: 0;
+    display: block;
+    margin: auto;
+  }
+  .index-container .updates {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    justify-items: center;
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  body {
-    max-width: 65%;
-  }
-}
-/*
-2. Typography
-============================
-*/
-
-@font-face {
-  font-family: "Mayan Open Sans";
-  src: url(fonts\mayan_num_open_sans.ttf);
-}
-@font-face {
-  font-family: "Babelstone Mayan";
-  src: url(fonts\babelstone-mayan.otf);
+.updates {
+  height: auto;
+  margin-top: 2rem;
+  border: 0.1rem solid var(--african-violet);
 }
 
 a:visited {
@@ -229,7 +269,7 @@ p {
 }
 
 .hanging li {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 #contact {
@@ -261,14 +301,6 @@ main {
   padding: 0.25rem;
 }
 
-.updates {
-  height: auto;
-  width: 75%;
-  border: 0.1rem solid var(--african-violet);
-  padding: 0.5rem;
-  margin: auto;
-}
-
 footer {
   margin: 1rem auto;
 }
@@ -280,6 +312,20 @@ figcaption {
 
 .hidden {
   display: none;
+}
+
+/*
+2. Typography
+============================
+*/
+
+@font-face {
+  font-family: "Mayan Open Sans";
+  src: url(fonts\mayan_num_open_sans.ttf);
+}
+@font-face {
+  font-family: "Babelstone Mayan";
+  src: url(fonts\babelstone-mayan.otf);
 }
 
 /*
